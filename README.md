@@ -1,6 +1,20 @@
 # Projeto Extensionista
 
+## Principal
+
+- formular pergunta respondível com dados
+- indicar público - Trabalhadores
+- território - São Paulo, Minas Gerais, DF (taxa alta), (Estado com menor taxa)
+- período - 5 anos - 2020 até 2025
+- fonte oficial - DATASUS
+- ODS - 3 – Saúde e Bem-Estar.
+- contrato de equipe (diário de bordo)
+
 ## Objetivo
+
+- Qual a taxa de mudança de burnout entre algum ano até outro ano nos Estados?
+- Por que esses Estados escolhidos? R: Correlação de dados. Proporção populacional não interfere na taxa.
+- Pandemia vs burnout
 
 Comparar a taxa de burnout entre o de Estado de São Paulo e o Estado de Minas Gerias.
 
@@ -14,3 +28,63 @@ Comparar a taxa de burnout entre o de Estado de São Paulo e o Estado de Minas G
 - Apresentação
   - Justificativa da correlação entre dados
   - Descoberta do porque tal comportamento acontece através dos dados encontrados
+
+> Como variou a taxa de notificações de síndrome de burnout por 100 mil habitantes entre 2020 e 2025 em São Paulo, Minas Gerais, Distrito Federal e na UF de menor taxa, e como essa variação se distribui por faixa etária e sexo?
+> “Proporção populacional não interfere na taxa” só vale se vocês realmente calcularem a taxa com a população (IBGE) como denominador. Com contagem bruta, a população interfere sim.
+
+## Diário de bordo
+
+03/10/2026 - Primeira reúnião. Discusão de ideias, 2 temas principais
+15/10/2026 - ETAPA 1 - Definimos o tema, perguntas, público, território, período, fonte oficial e ODS com meta específica. Acesso aos dados da base oficial e conversão de DBC para CSV (visualizar os dados do Datasus)
+16/10/2026 - ETAPA 2 - Iniciamos a tentativa de escolher o que vamos mostrar, procurar saber o que são os códigos nas tabelas, procuramos uma forma de filtrar os dados (pensamos em programação ou excel) 
+
+---
+
+O que desenvolver - Etapa 1
+Delimitar um problema social observável, formular pergunta respondível com dados, indicar público,
+território, período, fonte oficial e ODS com meta específica. Elaborar contrato de equipe (objetivos,
+tarefas, reuniões, solução de impasses).
+
+• ODS Principal: ODS 3 – Saúde e Bem-Estar.
+• Meta Específica (Meta 3.4): "Até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis via prevenção e tratamento, e promover a saúde mental e o bem-estar."
+• ODS Complementar (Diferencial para o grupo): ODS 8 – Trabalho Decente e Crescimento Econômico.
+• Meta Específica (Meta 8.8): "Proteger os direitos trabalhistas e promover ambientes de trabalho seguros e protegidos para todos os trabalhadores..."
+• Fontes Oficiais para Coleta de Dados:
+• Ministério da Previdência Social / INSS: Para os dados de concessão de benefícios por incapacidade temporária (antigo auxílio-doença) motivados por transtornos mentais e comportamentais relacionados ao trabalho.
+• MTE (Ministério do Trabalho e Emprego) / SmartLab: Ferramenta governamental que compila dados de acidentes e adoecimentos no trabalho por município.
+
+📊 Desenhando a "Pergunta Respondível" (Ajuste as lacunas em colchetes)
+
+Como o Burnout afeta diferentes categorias, o grupo precisa escolher um público e uma cidade para investigar. Escolham o cenário que acharem mais fácil de pesquisar ou que mais chame a atenção do grupo:
+
+Opção 1: Foco em Profissionais da Saúde (Médicos, Enfermeiros, Técnicos)
+
+"Qual foi o volume de afastamentos do trabalho por Síndrome de Burnout e episódios depressivos registrados entre os profissionais de enfermagem da rede pública hospitalar do município de [Nome da Cidade] no período de [Ex: 2023 a 2025]?"
+
+Opção 2: Foco em Professores (Rede Pública ou Privada)
+
+"Como evoluiu o número de licenças médicas concedidas a professores da rede estadual de ensino de [Nome do Estado] decorrentes de esgotamento profissional (Burnout) entre os anos de [Ex: 2022 e 2025]?"
+
+Opção 3: Foco Geral no Mercado Corporativo/Trabalho Formal da Cidade
+
+"Quais foram as principais causas de afastamento previdenciário (B31 e B91) ligadas a transtornos mentais e do comportamento relacionados ao trabalho no município de [Nome da Cidade] no ano de [Ex: 2025]?"
+
+📝 Resumo dos Dados de Escopo (Checklist da Etapa 1)
+
+Para o documento de vocês, a estrutura de texto direto ficará assim:
+• Problema Social: O crescimento dos casos de esgotamento profissional Crônico (Burnout) e o consequente afastamento de trabalhadores de suas atividades laborais.
+• Público: [Definam aqui: ex: Professores, Enfermeiros, Trabalhadores formais em geral].
+• Território: [A cidade de vocês ou o estado].
+• Período: [Definam uma janela de tempo, ex: de 2023 a 2025].
+• Fonte Oficial: Dados de afastamento do INSS / Ministério da Previdência Social.
+Para deixar essa pergunta pronta para entrega: qual é a profissão/público que vocês querem analisar e em qual cidade ou região vocês estão?
+
+
+## Etapa 1
+
+Pergunta: Como variou a taxa de notificações de síndrome de burnout por 100 mil habitantes entre 2020 e 2025 em São Paulo, Minas Gerais, Distrito Federal e na UF de menor taxa, e como essa variação se distribui por faixa etária e sexo?
+
+São Paulo - Mai1
+Minas Gerais
+Distrito Federal
+
