@@ -88,3 +88,44 @@ São Paulo - Mai1
 Minas Gerais
 Distrito Federal
 
+
+
+## Etapa 3
+
+- Comparar territórios, períodos ou grupos
+- Justificar métricas
+- Produzir no mínimo quatro visualizações com títulos, unidades, fonte e interpretação.
+- Relacionar resultados à pergunta e ao ODS
+- Formular proposta inicial de ação
+
+### Gráficos para fazer
+
+- Evolução anual de Diagnótico por Estado - **Gráfico de linha**
+  - São Paulo (2020-2025)
+  - Minas Gerais (2020-2025)
+  - Distrito Federal (2020-2025)
+- Idade
+  - Índice de diagnóstico por idade **Gráfico**
+- Sexo
+  - Qual sexo tem mais probabilidade de burnout? **Gráfico**
+- Profissão 5 principais
+  - Tempo de permanência no trabalho atual **Gráfico**
+
+### Justificar métricas
+
+- Evolução anual de Diagnótico por Estado
+  - São Paulo (Oportunidade de trabalho e população elevada)
+  - Minas Gerais (Qualidade de vida)
+  - Distrito Federal (Capital, está ligado à natureza da pressão e à cultura organizacional, e não ao tamanho do território ou ao valor do salário)
+- Idade (Qual faixa etária possui mais índices de burnout?)
+- Sexo (verificar como os casos de Burnout estão distribuídos entre os gêneros e investigar possíveis relações com jornada de trabalho, responsabilidades familiares e condições profissionais. Escolhemos a métrica gênero para comparar a distribuição dos casos de Burnout entre diferentes grupos e identificar possíveis diferenças nos padrões de esgotamento profissional.)
+- Profissões e o tempo de permanência (identificar quais profissões tem mais diagnóticos por burnout e medir se o fator do tempo influência no indice)
+
+## Relacionar resultados à pergunta e ao ODS
+
+Como variou a taxa de notificações de síndrome de burnout por 100 mil habitantes entre 2020 e 2025 em São Paulo, Minas Gerais, Distrito Federal e na UF de menor taxa, e como essa variação se distribui por faixa etária e sexo?
+
+**Meta 3.4 (principal)**: até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis, por meio de prevenção e tratamento, e promover a saúde mental e o bem-estar. O burnout não é medido pelos indicadores oficiais dessa meta (3.4.1 e 3.4.2), então ela entra como referência de contexto: acompanhar as notificações mostra se a saúde mental do trabalhador está sendo vista pelo sistema de saúde.
+
+**Meta 8.8 (complementar)**: proteger os direitos trabalhistas e promover ambientes de trabalho seguros para todos os trabalhadores. Ela liga o burnout às condições de trabalho. A meta 8.5 (pleno emprego e igualdade de remuneração) foi retirada, porque a base não tem dados de renda ou emprego.
+
