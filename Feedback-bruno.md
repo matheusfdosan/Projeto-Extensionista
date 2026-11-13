@@ -105,9 +105,9 @@ Sugestão de melhoria: elaborar um contrato contendo:
 ## IDH de cada Estado - Mapea a qualidade de vida em vários critérios.
 
 Minas Gerais interior não quer dizer que tem taxa menor. 
-
 Usar IDH para formular a pergunta, IDH alto tem mais casos de burnout  
-
 quantidade de registros e população
-
 regiões de são paulo tem mais estresse tem mais indice
+
+
+> Não temos dados suficiente sobre municipio.
