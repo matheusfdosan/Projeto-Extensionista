@@ -96,7 +96,7 @@ Distrito Federal
 - Justificar métricas
 - Produzir no mínimo quatro visualizações com títulos, unidades, fonte e interpretação.
 - Relacionar resultados à pergunta e ao ODS
-- Formular proposta inicial de ação
+- Formular proposta i\nicial de ação
 
 ### Gráficos para fazer
 
@@ -128,4 +128,15 @@ Como variou a taxa de notificações de síndrome de burnout por 100 mil habitan
 **Meta 3.4 (principal)**: até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis, por meio de prevenção e tratamento, e promover a saúde mental e o bem-estar. O burnout não é medido pelos indicadores oficiais dessa meta (3.4.1 e 3.4.2), então ela entra como referência de contexto: acompanhar as notificações mostra se a saúde mental do trabalhador está sendo vista pelo sistema de saúde.
 
 **Meta 8.8 (complementar)**: proteger os direitos trabalhistas e promover ambientes de trabalho seguros para todos os trabalhadores. Ela liga o burnout às condições de trabalho. A meta 8.5 (pleno emprego e igualdade de remuneração) foi retirada, porque a base não tem dados de renda ou emprego.
+
+## Formular proposta inicial de ação
+
+Colocar mais ongs ou centros de tratamento em locais com mais taxas
+Psicologos
+Aplicativo identificação de burnout90
+programa saude da familia - checkup
+
+fatores estressores de burnout
+Quais capitais tem programa saude da familia
+burnout é qualidade de vida
 
