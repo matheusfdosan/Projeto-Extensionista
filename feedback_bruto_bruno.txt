@@ -1,0 +1,730 @@
+João, Luís, Matheus e Weridiana, tudo bem com vocês? Espero que sim!
+
+Inicialmente, gostaria de reconhecer o empenho de vocês no desenvolvimento da Etapa 2 do Projeto Extensionista Interdisciplinar I, que aborda o burnout a partir de registros de transtornos mentais relacionados ao trabalho disponíveis no SINAN/DATASUS.
+
+A escolha do tema é relevante, pois permite discutir a saúde mental dos trabalhadores, as condições de trabalho e a importância dos sistemas de informação para o planejamento de ações de vigilância e prevenção.
+
+O material apresenta uma iniciativa interessante ao selecionar variáveis epidemiológicas e ocupacionais, organizar um dicionário inicial e comparar notificações de São Paulo, Minas Gerais e Distrito Federal entre 2020 e 2025.
+
+Entretanto, o documento ainda apresenta lacunas importantes na delimitação do problema, na comprovação da origem dos dados, no tratamento das variáveis, na interpretação dos indicadores e na apresentação do dashboard.
+
+Por isso, peço que considerem as orientações a seguir como prioridades para o aprimoramento do projeto.
+
+1. Página 1 – Título e identificação do projeto
+O documento apresenta apenas o título “Burnout”.
+
+Embora o tema seja pertinente, essa identificação é muito abrangente para um projeto de Ciência de Dados.
+
+Sugestão de melhoria: formular um título que explicite o fenômeno investigado, a fonte de dados, o território e o período.
+
+Uma possibilidade seria:
+
+“Notificações de transtornos mentais relacionados ao trabalho com registro de burnout: análise exploratória do SINAN em São Paulo, Minas Gerais e Distrito Federal (2020–2025)”.
+
+Essa formulação é mais precisa porque diferencia as notificações registradas da ocorrência real do transtorno na população.
+
+Também recomendo inserir os números de RA dos integrantes e conferir os demais elementos de identificação exigidos pelo template institucional.
+
+A imagem da capa deverá apresentar fonte e identificação de autoria ou licença, quando aplicável.
+
+2. Página 2 – Ausência de contextualização e pergunta de pesquisa
+O documento inicia diretamente com a identificação da base e das variáveis.
+
+Entretanto, não apresenta uma introdução que explique o burnout, sua relação com o trabalho e a importância da investigação.
+
+Também não foi identificada uma pergunta de pesquisa claramente formulada.
+
+Sugestão de melhoria: acrescentar uma contextualização apoiada em literatura científica e formular uma pergunta investigável.
+
+Por exemplo:
+
+“Como evoluíram as notificações de transtornos mentais relacionados ao trabalho com registro de burnout em São Paulo, Minas Gerais e Distrito Federal entre 2020 e 2025, considerando características sociodemográficas e ocupacionais?”
+
+Essa pergunta poderá orientar os indicadores, os gráficos e a interpretação dos resultados.
+
+3. Página 2 – Definição de burnout e classificação diagnóstica
+O grupo utiliza o código Z73.0, apresentado no documento como síndrome de burnout.
+
+É necessário aprofundar a discussão conceitual.
+
+O burnout é reconhecido pela Organização Mundial da Saúde como um fenômeno ocupacional relacionado ao estresse crônico no trabalho que não foi adequadamente administrado, e não deve ser tratado automaticamente como equivalente a qualquer transtorno mental.
+
+Além disso, a utilização do código Z73.0 exige cuidado na interpretação dos registros, especialmente diante das diferenças entre sistemas e classificações diagnósticas.
+
+Sugestão de melhoria: explicar a definição adotada, a classificação utilizada na base e os critérios empregados para selecionar os registros.
+
+Também recomendo distinguir o agravo notificado, identificado no documento pelo código F99, do diagnóstico específico Z73.0.
+
+O grupo deverá demonstrar como esses dois campos se relacionam no sistema de informação utilizado.
+
+4. Página 2 – Origem e documentação da base
+O documento informa que foram utilizadas tabelas do DATASUS, mas não apresenta o endereço específico de extração nem o procedimento completo de obtenção dos dados.
+
+Essa informação é indispensável.
+
+Sugestão de melhoria: acrescentar uma seção metodológica contendo:
+
+Sistema e conjunto de dados utilizados.
+
+Endereço oficial de acesso.
+
+Data de extração.
+
+Período selecionado.
+
+Unidades federativas incluídas.
+
+Critérios de inclusão e exclusão.
+
+Quantidade inicial de registros.
+
+Quantidade final após os filtros.
+
+Formato dos arquivos.
+
+Ferramentas utilizadas no processamento.
+
+Também será necessário informar se os dados foram obtidos por download de microdados ou por tabulação agregada.
+
+5. Página 2 – Dicionário de variáveis
+A construção do dicionário representa um avanço importante.
+
+Entretanto, a tabela apresenta problemas de legibilidade e ainda não demonstra todas as características necessárias para compreender o processamento.
+
+Recomendo incluir, para cada variável, o nome original, a descrição, o tipo, os códigos possíveis, os valores ausentes e a finalidade analítica.
+
+Também será importante diferenciar as variáveis originais daquelas criadas pelo grupo.
+
+Exemplo: a variável FAIXA_ETARIA é derivada da idade e precisa ter sua regra de classificação documentada.
+
+Da mesma forma, UF_SIGLA e ANO_DIAG deverão ter seus procedimentos de derivação explicitados.
+
+6. Páginas 2 e 3 – Recorte territorial
+O grupo selecionou São Paulo, Minas Gerais e Distrito Federal.
+
+Entretanto, não apresentou uma justificativa para essa escolha.
+
+Sugestão de melhoria: explicar se o recorte foi definido por diferenças populacionais, disponibilidade dos dados, características do mercado de trabalho ou outro critério fundamentado.
+
+Também será importante esclarecer se a unidade federativa representa o local da notificação, o local de residência ou o local de trabalho.
+
+Essas informações não são equivalentes e podem alterar a interpretação territorial.
+
+7. Página 3 – Variáveis ocupacionais
+O documento identifica informações potencialmente relevantes, como ocupação, atividade econômica, regime de trabalho, afastamento e evolução do caso.
+
+Essas variáveis podem enriquecer significativamente a pesquisa.
+
+Entretanto, aparecem apenas como possibilidades de utilização, sem resultados apresentados.
+
+Sugestão de melhoria: priorizar algumas variáveis diretamente relacionadas à pergunta de pesquisa e verificar sua completude antes de incorporá-las ao dashboard.
+
+Recomendo começar por ocupação, sexo, faixa etária e atividade econômica.
+
+Será necessário verificar se os códigos utilizados correspondem às classificações oficiais e se existem registros ignorados ou incompletos.
+
+8. Páginas 3 e 4 – Amostra de registros e inconsistências temporais
+A apresentação de registros individuais contribui para demonstrar a estrutura da base.
+
+Entretanto, identifiquei situações que exigem conferência.
+
+Na página 3, há um registro de Minas Gerais com notificação em 15/03/2024 e diagnóstico em 10/07/2024.
+
+Na página 4, há outro registro com notificação em 15/02/2025 e diagnóstico em 10/09/2025.
+
+Nesses exemplos, a data de diagnóstico é posterior à data de notificação.
+
+Isso não significa, necessariamente, que os registros estejam incorretos, mas exige investigação sobre o significado dos campos e o fluxo de preenchimento.
+
+Sugestão de melhoria: verificar a documentação oficial das variáveis e estabelecer regras de validação das datas.
+
+Também recomendo informar se a tabela contém registros reais desidentificados ou exemplos ilustrativos.
+
+9. Página 4 – Tratamento inicial dos dados
+O grupo informa que manteve 12 colunas e aplicou filtros por diagnóstico, ano e unidade federativa.
+
+Entretanto, essa descrição ainda é insuficiente para reproduzir o processamento.
+
+Sugestão de melhoria: documentar as seguintes operações:
+
+Importação dos arquivos.
+
+Seleção das variáveis.
+
+Padronização dos códigos.
+
+Conversão de datas e idades.
+
+Tratamento de registros ausentes.
+
+Identificação de duplicidades.
+
+Aplicação dos filtros.
+
+Agrupamento por ano e unidade federativa.
+
+Cálculo dos indicadores.
+
+Exportação da base tratada.
+
+Recomendo também apresentar as quantidades de registros antes e depois de cada etapa.
+
+10. Página 4 – Tabela comparativa e denominadores
+A tabela apresenta números absolutos e valores entre parênteses para as três unidades federativas.
+
+Entretanto, não há identificação clara do significado desses valores.
+
+Por exemplo, São Paulo apresenta 185 notificações em 2024, acompanhadas de 0,42.
+
+Minas Gerais apresenta 162 notificações e 0,79 no mesmo ano.
+
+Sugestão de melhoria: esclarecer se os valores entre parênteses correspondem a taxas por determinado número de habitantes, trabalhadores ou outro denominador.
+
+Se forem taxas, será necessário informar:
+
+A fórmula utilizada.
+
+A fonte da população de referência.
+
+O ano do denominador.
+
+A unidade de medida.
+
+O tratamento das diferenças populacionais entre os territórios.
+
+Não é adequado comparar diretamente quantidades absolutas entre São Paulo, Minas Gerais e Distrito Federal sem considerar suas diferenças populacionais.
+
+Também recomendo identificar formalmente a tabela, apresentar sua fonte e incluir uma nota explicativa.
+
+11. Página 4 – Evolução das notificações
+Os dados apresentados indicam crescimento expressivo das notificações no período.
+
+São Paulo passa de 3 registros em 2020 para 190 em 2025.
+
+Minas Gerais passa de 2 para 189.
+
+O Distrito Federal apresenta números muito menores.
+
+Entretanto, é necessário evitar interpretações precipitadas.
+
+O aumento das notificações não comprova, isoladamente, crescimento proporcional da ocorrência real de burnout.
+
+O resultado também pode estar relacionado à ampliação da vigilância, à melhoria do preenchimento, à maior identificação dos casos ou a mudanças nos procedimentos de notificação.
+
+Sugestão de melhoria: contextualizar a série histórica com documentos oficiais sobre vigilância em saúde do trabalhador e discutir a possibilidade de subnotificação.
+
+Também será importante verificar se os dados de 2025 estão consolidados.
+
+12. Página 4 – Dashboard e visualizações
+O documento apresenta um link para um arquivo de dashboard em Excel, mas não incorpora imagens, descrição dos painéis ou interpretação das visualizações.
+
+Por esse motivo, não é possível validar o funcionamento, os filtros, as fórmulas ou a qualidade visual do dashboard apenas pelo conteúdo apresentado no relatório.
+
+Recomendo que o grupo acrescente capturas das principais visualizações e descreva o que cada uma pretende demonstrar.
+
+O painel poderá apresentar:
+
+Visão geral: total de notificações e evolução anual.
+
+Comparação territorial: notificações e taxas padronizadas por unidade federativa.
+
+Perfil dos trabalhadores: sexo e faixa etária.
+
+Perfil ocupacional: profissões e atividades econômicas, conforme a qualidade dos registros.
+
+Qualidade dos dados: percentuais de preenchimento, registros ignorados e limitações.
+
+Também será importante apresentar filtros por ano, território e características dos trabalhadores.
+
+Os resultados do painel deverão ser conferidos com as tabelas produzidas no processamento.
+
+13. Fundamentação teórica e leituras recomendadas
+O trabalho ainda não apresenta fundamentação científica suficiente.
+
+Recomendo utilizar fontes que permitam compreender o burnout, a saúde mental relacionada ao trabalho e os limites dos sistemas de vigilância.
+
+1. ORGANIZAÇÃO MUNDIAL DA SAÚDE. Burn-out an occupational phenomenon: International Classification of Diseases.
+
+Fonte para compreender a definição e a classificação do burnout.
+
+Disponível em: https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases
+
+2. BRASIL. Ministério da Saúde. Saúde do Trabalhador e da Trabalhadora.
+
+Fonte para aprofundar a vigilância dos agravos relacionados ao trabalho.
+
+Disponível em: https://www.gov.br/saude/
+
+3. BRASIL. Ministério da Saúde. DATASUS.
+
+Fonte oficial para documentação e consulta dos sistemas de informação.
+
+Disponível em: https://datasus.saude.gov.br/
+
+4. FUNDACENTRO. Pesquisas e publicações sobre saúde e segurança no trabalho.
+
+Fonte institucional para contextualizar riscos psicossociais e condições de trabalho.
+
+Disponível em: https://www.gov.br/fundacentro/
+
+5. ORGANIZAÇÃO INTERNACIONAL DO TRABALHO; ORGANIZAÇÃO MUNDIAL DA SAÚDE. Mental health at work: policy brief. 2022.
+
+Documento para compreender as relações entre trabalho, riscos psicossociais e saúde mental.
+
+Disponível em: https://www.who.int/publications/i/item/9789240057944
+
+Também recomendo pesquisar artigos científicos brasileiros publicados entre 2023 e 2026 nas revistas Cadernos de Saúde Pública, Ciência & Saúde Coletiva, Revista Brasileira de Saúde Ocupacional e Psicologia: Ciência e Profissão.
+
+Os descritores sugeridos são “burnout”, “esgotamento profissional”, “transtornos mentais relacionados ao trabalho”, “SINAN”, “saúde do trabalhador” e “subnotificação”.
+
+A seleção deverá priorizar pesquisas que ajudem a interpretar os resultados efetivamente encontrados pelo grupo.
+
+14. Páginas 1 a 4 – Citações, referências e redação acadêmica
+O documento não apresenta uma seção de referências bibliográficas.
+
+Também não foram identificadas citações científicas que sustentem a definição do problema, a escolha das variáveis ou a interpretação dos resultados.
+
+Sugestão de melhoria: incorporar citações ao longo do texto e elaborar uma lista de referências conforme a ABNT NBR 6023.
+
+Será necessário apresentar referências para a definição de burnout, a documentação do SINAN, os critérios de seleção e a discussão dos resultados.
+
+Quanto à apresentação acadêmica, recomendo:
+
+Padronizar fonte, margens e espaçamento conforme o template.
+
+Revisar os recuos de parágrafo.
+
+Numerar as seções.
+
+Identificar tabelas e figuras.
+
+Apresentar as fontes dos dados.
+
+Evitar tabelas fragmentadas sem indicação de continuidade.
+
+Melhorar a legibilidade dos títulos e das células.
+
+Inserir textos interpretativos após as tabelas e gráficos.
+
+O relatório deverá apresentar argumentação acadêmica, e não apenas uma sequência de quadros e dados.
+
+15. Relação com o ODS e aplicação extensionista
+O tema apresenta relação direta com o ODS 3 – Saúde e Bem-Estar, especialmente no que diz respeito à promoção da saúde mental.
+
+Entretanto, essa relação precisa ser explicitada no texto.
+
+Recomendo avaliar a vinculação à meta 3.4, que contempla a promoção da saúde mental e do bem-estar.
+
+Também poderá ser discutida a relação com o ODS 8 – Trabalho Decente e Crescimento Econômico, especialmente no âmbito das condições de trabalho e da proteção dos trabalhadores.
+
+Sugestão de melhoria: escolher uma meta principal, justificar sua relação com os indicadores e explicar como os resultados poderão ser utilizados socialmente.
+
+Uma possibilidade extensionista seria elaborar um painel informativo acompanhado de material educativo sobre saúde mental no trabalho, limites das notificações e importância da prevenção dos riscos psicossociais.
+
+O material deverá evitar a utilização dos dados para diagnosticar trabalhadores ou atribuir causalidade a profissões e setores sem evidências suficientes.
+
+16. Prioridades para a próxima etapa
+Considerando a análise realizada, recomendo que vocês priorizem:
+
+Reformular o título e definir a pergunta de pesquisa.
+
+Apresentar uma introdução fundamentada cientificamente.
+
+Documentar a origem e a extração dos dados.
+
+Revisar os códigos diagnósticos e o dicionário de variáveis.
+
+Verificar as inconsistências nas datas.
+
+Explicar os denominadores e as taxas apresentadas.
+
+Validar o processamento e as quantidades de registros.
+
+Apresentar e interpretar as visualizações do dashboard.
+
+Discutir a subnotificação e os limites das comparações territoriais.
+
+Inserir citações e referências científicas.
+
+Explicitar a relação com o ODS e a aplicação extensionista.
+
+Revisar a apresentação acadêmica conforme o template.
+
+Considerações finais
+João, Luís, Matheus e Weridiana, o trabalho apresenta uma temática relevante e uma iniciativa adequada de utilização de dados públicos para investigar questões relacionadas à saúde mental dos trabalhadores.
+
+A seleção de variáveis e a construção de uma tabela comparativa demonstram que o grupo iniciou o percurso de exploração dos dados.
+
+Entretanto, a Etapa 2 ainda precisa ser substancialmente aprimorada, especialmente quanto à documentação do processamento, à validação dos indicadores e à apresentação das visualizações.
+
+O desafio será transformar os registros selecionados em informações confiáveis, interpretáveis e socialmente úteis, respeitando as limitações dos sistemas de notificação.
+
+Recomendo que todos participem da revisão metodológica e da conferência dos resultados antes de avançar para a próxima entrega.
+
+Parabenizo vocês pela iniciativa e incentivo a continuidade do projeto com maior aprofundamento técnico e científico.
+
+Permaneço à disposição para orientá-los.
+
+Forte abraço!
+
+Prof. Bruno César dos Santos
+
+João Victor, Luís, Matheus e Weridiana, tudo bem com vocês? Espero que sim!
+
+Inicialmente, gostaria de parabenizá-los pela escolha do tema “Burnout: notificações de esgotamento profissional e sua distribuição territorial no Brasil”, apresentado na primeira etapa do Projeto Extensionista Interdisciplinar I.
+
+A temática é relevante, especialmente por abordar a saúde mental dos trabalhadores e suas relações com as condições de trabalho. Trata-se de uma questão que merece atenção das instituições, dos profissionais de saúde e das políticas públicas, além de oferecer possibilidades de aplicação da Ciência de Dados para compreender indicadores relacionados ao adoecimento ocupacional.
+
+Gostaria de reconhecer positivamente a iniciativa de delimitar um período de investigação, identificar unidades da Federação e estabelecer relações com os Objetivos de Desenvolvimento Sustentável. Também considero adequado o cuidado em reconhecer que as notificações de burnout não constituem indicadores diretos de cumprimento da meta 3.4 do ODS 3.
+
+Entretanto, ao analisar o material encaminhado, observei que a proposta ainda se encontra em uma fase bastante inicial e necessita de desenvolvimento em aspectos fundamentais para atender às exigências da Etapa 1.
+
+Apresento, a seguir, algumas orientações para ajudá-los a organizar e aprofundar a investigação.
+
+1. Delimitação do tema e problema de pesquisa
+O documento apresenta como tema a pergunta "Como o Burnout afeta as pessoas?".
+
+Embora seja uma questão relevante, sua formulação é ampla e não corresponde exatamente ao objeto que o grupo pretende investigar com os dados públicos.
+
+Na sequência, o trabalho apresenta uma pergunta mais específica sobre a evolução das notificações entre 2020 e 2025.
+
+Sugestão de melhoria: transformar o tema inicial em um título acadêmico mais preciso, por exemplo:
+
+“Notificações de transtornos mentais relacionados ao trabalho e identificação do burnout: análise de dados públicos entre 2020 e 2025”.
+
+Essa sugestão depende de uma verificação fundamental: confirmar se a base escolhida permite identificar especificamente os registros de burnout ou se apresenta apenas informações agregadas sobre transtornos mentais relacionados ao trabalho.
+
+O grupo não deverá utilizar o total de notificações de transtornos mentais relacionados ao trabalho como se todos os registros correspondessem à síndrome de burnout.
+
+Recomendo que essa verificação seja realizada antes da definição definitiva do título e da pergunta de pesquisa.
+
+2. Pergunta de pesquisa e viabilidade da investigação
+A pergunta apresentada é:
+
+"Como variou a taxa de notificações de síndrome de burnout por 100 mil habitantes entre 2020 e 2025 em São Paulo, Minas Gerais, Distrito Federal e na UF de menor taxa, e como essa variação se distribui por faixa etária e sexo?"
+
+A formulação demonstra preocupação com a delimitação temporal, territorial e demográfica.
+
+Entretanto, existem três aspectos que precisam ser esclarecidos.
+
+Primeiro: verificar se o sistema permite identificar especificamente as notificações de burnout, distinguindo-as dos demais agravos relacionados ao trabalho.
+
+Segundo: definir qual população será utilizada no denominador. Como o burnout está relacionado ao contexto ocupacional, uma taxa por 100 mil habitantes da população geral não representa necessariamente a exposição dos trabalhadores ao fenômeno.
+
+Terceiro: esclarecer como será identificada a unidade da Federação com a menor taxa. Essa escolha depende dos próprios resultados da análise e exige um critério previamente definido.
+
+Sugestão de melhoria: inicialmente, recomendo concentrar a investigação em São Paulo, Minas Gerais e Distrito Federal, verificando a disponibilidade e a comparabilidade dos registros.
+
+A inclusão de uma quarta unidade da Federação poderá ocorrer posteriormente, desde que o critério de seleção seja explicitado e metodologicamente justificado.
+
+3. Bases de dados e confiabilidade das informações
+O grupo menciona DATASUS, SmartLab e Portal Afya como fontes de pesquisa.
+
+Essa seleção precisa ser melhor organizada, pois as três fontes possuem finalidades distintas.
+
+DATASUS/SINAN: poderá constituir a principal fonte de registros administrativos, desde que seja confirmada a disponibilidade das variáveis necessárias.
+
+SmartLab: poderá contribuir com indicadores e informações complementares sobre segurança e saúde no trabalho. Entretanto, será necessário verificar quais indicadores estão disponíveis, sua origem e a compatibilidade com o período investigado.
+
+Portal Afya: poderá ser utilizado como fonte de contextualização, quando apresentar informações pertinentes e devidamente fundamentadas. Contudo, não deverá substituir documentos oficiais ou artigos científicos na definição dos indicadores epidemiológicos.
+
+Sugestão de melhoria: elaborar um quadro com as seguintes informações:
+
+Nome da fonte.
+
+Instituição responsável.
+
+Indicadores disponíveis.
+
+Período de referência.
+
+Abrangência territorial.
+
+Variáveis de sexo e faixa etária.
+
+Possibilidade de identificação específica do burnout.
+
+Endereço eletrônico e data de consulta.
+
+Essa organização será fundamental para demonstrar que a pergunta de pesquisa pode ser respondida com os dados efetivamente disponíveis.
+
+4. Classificação do burnout e identificação dos registros
+O documento menciona o burnout como CID-10 Z73.0 e informa sua relação com os registros de transtornos mentais relacionados ao trabalho no SINAN.
+
+Essa informação exige aprofundamento metodológico.
+
+O fato de existir uma categoria de notificação de transtornos mentais relacionados ao trabalho não significa que todos os registros correspondam ao burnout.
+
+Sugestões de melhoria:
+
+Consultar a documentação oficial da ficha de notificação utilizada.
+
+Verificar os campos relacionados ao diagnóstico e à classificação do agravo.
+
+Identificar se o código correspondente ao burnout pode ser selecionado ou recuperado na base.
+
+Conferir se os registros disponíveis permitem distinguir diferentes condições relacionadas à saúde mental ocupacional.
+
+Verificar as mudanças de classificação e de registro ocorridas ao longo do período investigado.
+
+Também recomendo consultar a classificação internacional vigente e os documentos institucionais sobre o burnout como fenômeno ocupacional, distinguindo-o de outros transtornos mentais.
+
+Atenção: se a base pública não permitir identificar o burnout separadamente, será necessário reformular a investigação para analisar os transtornos mentais relacionados ao trabalho, utilizando o burnout como parte da contextualização teórica.
+
+Essa adequação evitará conclusões que não possam ser sustentadas pelos dados.
+
+5. Objetivos da pesquisa
+O documento ainda não apresenta um objetivo geral e objetivos específicos organizados em uma seção própria.
+
+Esse é um elemento importante da primeira etapa e precisa ser desenvolvido.
+
+Sugestão de objetivo geral:
+
+"Analisar a evolução e a distribuição territorial das notificações de transtornos mentais relacionados ao trabalho, com atenção à possibilidade de identificação de registros de burnout, em unidades da Federação selecionadas, entre 2020 e 2025, utilizando dados públicos oficiais."
+
+Sugestões de objetivos específicos:
+
+Identificar as bases oficiais e as variáveis disponíveis.
+
+Verificar a possibilidade de identificar especificamente notificações de burnout.
+
+Levantar a quantidade de registros por ano e unidade da Federação.
+
+Descrever a distribuição por sexo e faixa etária, quando essas variáveis estiverem disponíveis.
+
+Construir indicadores comparativos com denominadores adequados.
+
+Desenvolver visualizações para comunicar os resultados.
+
+Propor uma aplicação social relacionada à informação e à prevenção do adoecimento ocupacional.
+
+Os objetivos deverão ser ajustados após a confirmação da disponibilidade dos dados.
+
+6. Público-alvo, território e período
+O grupo identifica trabalhadores e estudantes como público-alvo.
+
+Entretanto, é necessário diferenciar a população investigada da população beneficiada pelo produto extensionista.
+
+Sugestão de melhoria: definir como população de interesse os trabalhadores abrangidos pelos registros de saúde ocupacional.
+
+Os estudantes poderão integrar o público beneficiado pelas ações educativas, especialmente aqueles que também exercem atividades profissionais.
+
+Quanto ao território, o documento menciona São Paulo, Minas Gerais e Distrito Federal. Entretanto, a pergunta de pesquisa inclui uma quarta unidade da Federação ainda não identificada.
+
+Recomendo padronizar o recorte territorial e esclarecer os critérios de seleção.
+
+O período de 2020 a 2025 é pertinente como proposta inicial, mas exige verificação da disponibilidade e da atualização dos registros.
+
+Também será necessário considerar que mudanças na notificação, na organização dos serviços e nas condições de trabalho durante a pandemia podem influenciar a interpretação da série histórica.
+
+7. Relação com os Objetivos de Desenvolvimento Sustentável
+O grupo estabeleceu relação com a meta 3.4 do ODS 3 – Saúde e Bem-Estar e com a meta 8.8 do ODS 8 – Trabalho Decente e Crescimento Econômico.
+
+Essa escolha é pertinente.
+
+A meta 3.4 permite discutir a promoção da saúde mental e do bem-estar, enquanto a meta 8.8 se relaciona à proteção dos direitos trabalhistas e à promoção de ambientes de trabalho seguros.
+
+Gostaria de destacar positivamente o reconhecimento de que os registros de burnout não correspondem diretamente aos indicadores oficiais de acompanhamento da meta 3.4.
+
+Sugestão de melhoria: aprofundar a justificativa, explicando como a análise de notificações poderá contribuir para compreender aspectos do adoecimento relacionado ao trabalho.
+
+Recomendo também destacar que o aumento das notificações pode decorrer tanto de mudanças na ocorrência dos agravos quanto da ampliação do reconhecimento, diagnóstico e registro dos casos.
+
+8. Fundamentação teórica e referências científicas
+O documento ainda não apresenta uma fundamentação teórica desenvolvida.
+
+Embora a primeira etapa não exija uma revisão bibliográfica extensa, é importante demonstrar que a escolha do problema está apoiada em informações científicas e institucionais.
+
+Sugestões de melhoria:
+
+Apresentar uma definição fundamentada de burnout.
+
+Diferenciar estresse ocupacional, esgotamento profissional e transtornos mentais relacionados ao trabalho.
+
+Contextualizar a saúde mental dos trabalhadores no Brasil.
+
+Consultar estudos sobre fatores psicossociais e organização do trabalho.
+
+Identificar pesquisas sobre notificação e subnotificação de agravos ocupacionais.
+
+Relacionar a temática às políticas de saúde do trabalhador.
+
+Recomendo priorizar artigos científicos publicados entre 2023 e 2026, preferencialmente em periódicos brasileiros e disponíveis em língua portuguesa.
+
+A fundamentação deverá contribuir para delimitar o problema e justificar a escolha dos indicadores.
+
+9. Citações e referências bibliográficas
+Um aspecto que precisa de atenção é a ausência de uma seção de referências bibliográficas.
+
+O documento menciona DATASUS, SmartLab, Portal Afya, CID-10 e metas dos ODS, mas não apresenta os registros completos dessas fontes.
+
+Sugestões de melhoria:
+
+Inserir citações no corpo do texto sempre que forem utilizados conceitos, dados ou informações provenientes de fontes externas.
+
+Organizar uma seção de referências conforme a ABNT NBR 6023.
+
+Observar a ABNT NBR 10520 na apresentação das citações.
+
+Identificar corretamente as instituições responsáveis pelos dados.
+
+Registrar os endereços eletrônicos e as datas de acesso.
+
+Utilizar artigos científicos para fundamentar afirmações sobre burnout e saúde mental ocupacional.
+
+Evitar utilizar exclusivamente portais informativos como fundamentação científica.
+
+Como melhorar: cada informação externa apresentada deverá ser acompanhada de uma citação correspondente, com sua referência completa ao final.
+
+Recomendo especial atenção às afirmações sobre classificação diagnóstica, registro no SINAN e relação entre burnout e condições de trabalho.
+
+10. Normas ABNT, paragrafação e apresentação acadêmica
+O documento apresenta uma capa ilustrada e uma segunda página com os elementos principais da proposta.
+
+Entretanto, a organização ainda precisa ser adequada ao formato acadêmico solicitado.
+
+Sugestões de melhoria:
+
+Capa: incluir instituição, curso, título específico, nomes completos dos estudantes, respectivos RA, local e ano.
+
+Imagem: identificar a origem da ilustração utilizada na capa e verificar as condições de utilização.
+
+Título: substituir a expressão genérica "Burnout" por um título que apresente o objeto e a delimitação da pesquisa.
+
+Seções: organizar tema, problema, pergunta, objetivos, justificativa, público-alvo, território, período, bases de dados, ODS e referências.
+
+Fonte: padronizar Arial ou Times New Roman, tamanho 12, conforme o modelo institucional.
+
+Espaçamento: utilizar 1,5 entre linhas no corpo do texto, observando as exceções normativas.
+
+Margens: utilizar 3 cm nas margens superior e esquerda e 2 cm nas margens inferior e direita, salvo orientação institucional diferente.
+
+Paragrafação: estabelecer recuo uniforme na primeira linha dos parágrafos.
+
+Alinhamento: utilizar texto justificado, evitando espaços e deslocamentos manuais.
+
+Títulos e subtítulos: padronizar o alinhamento e a hierarquia das seções.
+
+Referências: inserir uma seção própria, com os elementos bibliográficos completos.
+
+Recomendo também substituir a apresentação excessivamente esquemática por pequenos parágrafos explicativos, especialmente na justificativa e na descrição das bases.
+
+A primeira etapa deve ser sintética, mas precisa demonstrar clareza metodológica e fundamentação acadêmica.
+
+11. Contrato de equipe e organização das atividades
+O documento identifica quatro integrantes, o que está de acordo com a composição geral prevista para os grupos.
+
+Entretanto, não foi apresentado o contrato de equipe.
+
+Esse documento é importante para formalizar as responsabilidades e organizar o desenvolvimento das próximas etapas.
+
+Sugestão de melhoria: elaborar um contrato contendo:
+
+Nome completo e RA de cada integrante.
+
+Objetivo comum do grupo.
+
+Distribuição das responsabilidades.
+
+Periodicidade e canal das reuniões.
+
+Procedimentos para registro das decisões.
+
+Prazos internos de entrega.
+
+Critérios para resolução de eventuais dificuldades.
+
+Recomendo que todos participem das atividades de pesquisa e análise, ainda que existam responsabilidades específicas.
+
+O contrato poderá contribuir para o acompanhamento das tarefas e para a integração entre os materiais produzidos.
+
+12. Leituras complementares e fontes para aprofundamento
+Para apoiar o desenvolvimento da investigação, recomendo as seguintes consultas e leituras em língua portuguesa, sempre verificando a versão e a documentação efetivamente utilizadas.
+
+1. BRASIL. Ministério da Saúde. Informações de Saúde (TABNET).
+
+Fonte para consultar os dados públicos de saúde e verificar a disponibilidade de registros relacionados aos transtornos mentais e à saúde do trabalhador.
+
+Disponível em: https://datasus.saude.gov.br/informacoes-de-saude-tabnet/
+
+2. ORGANIZAÇÃO INTERNACIONAL DO TRABALHO; MINISTÉRIO PÚBLICO DO TRABALHO. Observatório de Segurança e Saúde no Trabalho – SmartLab.
+
+Recomendo consultar os indicadores disponíveis e suas definições metodológicas, observando a possibilidade de utilização de informações complementares sobre adoecimento ocupacional.
+
+Disponível em: https://smartlabbr.org/sst
+
+3. BRASIL. Ministério da Saúde. Saúde do Trabalhador e da Trabalhadora.
+
+Material institucional para compreender as políticas de vigilância, promoção e proteção da saúde dos trabalhadores.
+
+Disponível em: https://www.gov.br/saude/
+
+4. ORGANIZAÇÃO MUNDIAL DA SAÚDE. Classificação Internacional de Doenças – CID-11.
+
+Recomendo consultar as informações sobre o burnout e sua caracterização como fenômeno ocupacional, observando as diferenças em relação a outras condições de saúde mental.
+
+Disponível em: https://icd.who.int/
+
+5. BRASIL. Relatório Nacional Voluntário 2024.
+
+Material recomendado para aprofundar a relação entre o projeto e os Objetivos de Desenvolvimento Sustentável, especialmente os ODS 3 e 8.
+
+Disponível em: https://www.gov.br/secretariageral/pt-br/cnods/RNV_Brasil/portugues/relatorio-nacional-voluntario-brasileiro
+
+6. MACEDO, Dirceu Flavio; LEMOS, Daniela Lucas da Silva. Modelo de governança para dados abertos governamentais: uma proposta para disponibilização qualificada e transparente de recursos informacionais na rede. Perspectivas em Ciência da Informação, v. 30, 2025.
+
+A leitura poderá contribuir para compreender critérios de organização, confiabilidade e utilização responsável dos dados públicos.
+
+Disponível em: https://doi.org/10.1590/1981-5344/55761
+
+Também recomendo pesquisar artigos científicos na SciELO e no Google Acadêmico, utilizando expressões como "síndrome de burnout e saúde do trabalhador", "transtornos mentais relacionados ao trabalho", "notificação de agravos ocupacionais" e "fatores psicossociais no ambiente de trabalho".
+
+As leituras deverão ser incorporadas à fundamentação teórica com citações e referências adequadas.
+
+13. Orientações para a continuidade do projeto
+Para avançar com maior segurança, recomendo que o grupo priorize as seguintes atividades:
+
+Confirmar se a base oficial permite identificar especificamente os registros de burnout.
+
+Reformular o título e a pergunta de pesquisa conforme a disponibilidade dos dados.
+
+Definir o território e o período de investigação.
+
+Identificar as variáveis efetivamente disponíveis.
+
+Verificar a adequação dos denominadores utilizados no cálculo das taxas.
+
+Elaborar um dicionário de dados.
+
+Desenvolver o objetivo geral e os objetivos específicos.
+
+Ampliar a justificativa e a fundamentação científica.
+
+Organizar as citações e referências.
+
+Elaborar o contrato de equipe e padronizar o documento conforme as normas acadêmicas.
+
+Como possibilidade de aplicação social, o grupo poderá desenvolver um painel informativo sobre notificações de transtornos mentais relacionados ao trabalho, acompanhado de explicações acessíveis sobre saúde ocupacional, prevenção e canais públicos de orientação.
+
+Entretanto, a definição desse produto deverá considerar os indicadores realmente disponíveis e as limitações da base utilizada.
+
+Considerações finais
+João Victor, Luís, Matheus e Weridiana, considero que a escolha do tema é pertinente e apresenta potencial para o desenvolvimento de uma investigação socialmente relevante.
+
+A proposta demonstra uma intenção positiva de utilizar dados públicos para compreender aspectos do adoecimento relacionado ao trabalho e contribuir para a discussão sobre saúde mental e condições laborais.
+
+Entretanto, a primeira etapa ainda necessita de complementações importantes, especialmente na definição e viabilidade da base de dados, na organização dos objetivos, na delimitação do problema, na fundamentação científica, na apresentação das referências e na elaboração do contrato de equipe.
+
+O principal ponto de atenção é verificar se os registros oficiais permitem identificar especificamente o burnout. Essa confirmação deverá orientar a formulação definitiva da pesquisa e evitar interpretações inadequadas.
+
+Recomendo que o grupo aproveite a temática escolhida e realize os ajustes indicados antes de avançar para análises quantitativas e visualizações.
+
+As observações apresentadas têm caráter orientador e buscam contribuir para o desenvolvimento de uma pesquisa consistente, viável e socialmente relevante.
+
+Parabenizo todos pela iniciativa e incentivo a continuidade do trabalho.
+
+Permaneço à disposição para orientá-los ao longo das próximas etapas.
+
+Forte abraço!
+
+Prof. Bruno César dos Santos

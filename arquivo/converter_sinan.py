@@ -411,30 +411,7 @@ def dbf_to_dataframe(dbf_file):
 # Programa principal
 # ============================================================
 
-def main():
-
-    if len(sys.argv) < 2:
-
-        print(
-            "\nUso:"
-        )
-
-        print(
-            "  python converter_sinan.py arquivo.dbc"
-        )
-
-        print(
-            "\nExemplo:"
-        )
-
-        print(
-            "  python converter_sinan.py MENTBR13.dbc"
-        )
-
-        sys.exit(1)
-
-
-    input_file = Path(sys.argv[1])
+def converter_um(input_file):
 
     if not input_file.exists():
 
@@ -448,15 +425,11 @@ def main():
     if input_file.suffix.lower() != ".dbc":
 
         print(
-            "Erro: o arquivo precisa ter extensão .dbc"
+            f"Erro: o arquivo precisa ter extensão .dbc: {input_file}"
         )
 
         sys.exit(1)
 
-
-    # --------------------------------------------------------
-    # DBC -> DBF
-    # --------------------------------------------------------
 
     dbf_file = input_file.with_suffix(".dbf")
 
@@ -465,10 +438,6 @@ def main():
         dbf_file
     )
 
-
-    # --------------------------------------------------------
-    # DBF -> DataFrame
-    # --------------------------------------------------------
 
     print(
         "\nLendo banco de dados..."
@@ -488,145 +457,78 @@ def main():
     )
 
 
-    # --------------------------------------------------------
-    # DBF -> CSV
-    # --------------------------------------------------------
+    # Planilha com todas as fichas. Nenhum CID é excluído.
+    excel_file = input_file.with_suffix(".xlsx")
 
-    csv_file = input_file.with_suffix(
-        ".csv"
-    )
-
-    df.to_csv(
-        csv_file,
+    df.to_excel(
+        excel_file,
         index=False,
-        sep=";",
-        encoding="utf-8-sig"
+        sheet_name="Fichas"
     )
 
 
     print(
-        f"\nCSV criado:"
+        f"\nExcel criado, sem filtro:"
     )
 
     print(
-        f"  {csv_file}"
+        f"  {excel_file}"
+    )
+
+    print(
+        f"  {len(df)} fichas, {len(df.columns)} colunas"
     )
 
 
-    # --------------------------------------------------------
-    # Filtrar Burnout Z73.0
-    # --------------------------------------------------------
+def main():
 
-    # Procuramos automaticamente por campos que
-    # possam conter o CID.
-    possible_cid_fields = [
-        column
-        for column in df.columns
-        if (
-            "CID" in column.upper()
-            or "DIAG" in column.upper()
-        )
-    ]
-
-
-    if possible_cid_fields:
+    if len(sys.argv) < 2:
 
         print(
-            "\nCampos relacionados ao diagnóstico:"
+            "\nUso:"
         )
 
-        for field in possible_cid_fields:
+        print(
+            "  python converter_sinan.py arquivo.dbc"
+        )
 
-            print(
-                f"  - {field}"
-            )
+        print(
+            "\nVários arquivos de uma vez:"
+        )
 
+        print(
+            "  python converter_sinan.py MENTBR20.dbc MENTBR21.dbc MENTBR22.dbc"
+        )
 
-        # Usamos DIAG_ESP se existir.
-        if "DIAG_ESP" in df.columns:
-
-            cid_column = "DIAG_ESP"
-
-            cid = (
-                df[cid_column]
-                .astype(str)
-                .str.upper()
-                .str.replace(
-                    ".",
-                    "",
-                    regex=False
-                )
-                .str.strip()
-            )
-
-            burnout = df[
-                cid == "Z730"
-            ].copy()
+        sys.exit(1)
 
 
-            burnout_file = (
-                input_file.parent
-                / f"{input_file.stem}_BURNOUT_Z730.csv"
-            )
+    try:
+
+        import openpyxl
+
+    except ImportError:
+
+        print(
+            "Erro: falta a biblioteca openpyxl."
+        )
+
+        print(
+            "Instale com: pip install openpyxl pandas"
+        )
+
+        sys.exit(1)
 
 
-            burnout.to_csv(
-                burnout_file,
-                index=False,
-                sep=";",
-                encoding="utf-8-sig"
-            )
+    for caminho in sys.argv[1:]:
 
-
-            print(
-                "\n================================"
-            )
-
-            print(
-                "BURNOUT / CID-10 Z73.0"
-            )
-
-            print(
-                "================================"
-            )
-
-            print(
-                f"Casos encontrados: {len(burnout)}"
-            )
-
-            print(
-                f"Arquivo:"
-            )
-
-            print(
-                f"  {burnout_file}"
-            )
-
-
-            # Também gera Excel
-            excel_file = (
-                input_file.parent
-                / f"{input_file.stem}_BURNOUT_Z730.xlsx"
-            )
-
-
-            burnout.to_excel(
-                excel_file,
-                index=False
-            )
-
-
-            print(
-                f"\nExcel:"
-            )
-
-            print(
-                f"  {excel_file}"
-            )
+        converter_um(
+            Path(caminho)
+        )
 
 
     print(
-        "\nConversão concluída!"
+        "\nConversão concluída. Nenhuma ficha foi excluída."
     )
 
 
